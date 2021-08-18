@@ -18,5 +18,13 @@
             "body": "lorem20",
             "likes": 30
         }
+    ],
+    "pools": [
+        {
+            "id": 1,
+            "questions": "React or Vue",
+            "answerA": "Vue",
+            "answerB": "React"
+        }
     ]
 }
