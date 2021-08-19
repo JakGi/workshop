@@ -1,47 +1,25 @@
-const getTodos = (resource) => {
-  return new Promise((resolve, reject) => {
-    const request = new XMLHttpRequest();
+// async & await
 
-    request.addEventListener("readystatechange", () => {
-      if (request.readyState === 4 && request.status === 200) {
-        const data = JSON.parse(request.responseText);
-        resolve(data)
-      } else if (request.readyState === 4) {
-        reject('some error')
-      }
-    });
-
-    request.open("GET", resource);
-    request.send();
-  });
+const getTodos = async () => {
+  const response = await fetch("todos/luigi.json");
+  const data = await response.json();
+  return data;
 };
 
-getTodos('todos/luigi.json').then(data => {
-  console.log('promise resolved: ', data)
-}).catch((err) => {
-  console.log('promise rejecter: ', err)
-});
+console.log("1")
+console.log("2")
 
-// promise example
+getTodos()
+  .then((data) => {console.log("resolved:", data); });
 
-// const getSomething = () => {
+console.log("3")
+console.log("4")
 
-//   return new Promise((resolve, reject) => {
-//     // fetch data
-//     // resolve('some data');
-//     reject('some error');
-//   });
-
-// };
-
-// getSomething().then((data) => {
-//  console.log(data);
-// }, (err) => {
-//   console.log(err)
-// });
-
-// getSomething().then(data => {
-//   console.log(data)
-// }).catch(err => {
-//   console.log(err)
+// fetch('todos/luigi.json').then((response) => {
+//   console.log('resolved', response);
+//   return response.json();
+// }).then(data => {
+//   console.log(data);
+// }).catch((err) => {
+//   console.log('rejected', err)
 // })
