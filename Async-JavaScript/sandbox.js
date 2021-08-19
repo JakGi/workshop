@@ -1,13 +1,21 @@
-// fetch api
+// async & await
 
-fetch("todos/luigi.json")
-  .then((response) => {
-    console.log("resolve", response);
-    return response.json();
-  })
-  .then((date) => {
-    console.log(date)
+const getTodos = async () => {
+  const response = await fetch("todos/luigi.json");
+
+  if(response.status !== 200) {
+    throw new Error('cannot fatch data');
+  }
+
+  const data = await response.json();
+
+  return data;
+};
+
+getTodos()
+  .then((data) => {
+    console.log("resolved:", data);
   })
   .catch((err) => {
-    console.log("rejected", err);
+    console.log("rejected: ", err.message);
   });
