@@ -1,17 +1,34 @@
-// HTTP request
+const getTodos = (callback) => {
+  const request = new XMLHttpRequest();
 
-const request = new XMLHttpRequest();
-
-request.addEventListener('readystatechange', () => {
+  request.addEventListener("readystatechange", () => {
     // console.log(request, request.readyState);
-    if(request.readyState === 4 && request.status === 200) {
-        console.log(request, request.responseText)
-    }else if(request.readyState === 4){
-        console.log('could not fatch data')
+    if (request.readyState === 4 && request.status === 200) {
+      callback(undefined, request.responseText);
+    } else if (request.readyState === 4) {
+      callback('could not fetch data', undefined);
+    }
+  });
+
+  // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
+
+  request.open("GET", "https://jsonplaceholder.typicode.com/todos/");
+  request.send();
+};
+
+console.log(1)
+console.log(2)
+
+getTodos((err, data) => {
+    console.log('callback fired')
+    if(err) {
+        console.log(err);
+    }else {
+        console.log(data);
     }
 });
 
-// https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState
 
-request.open('GET', 'https://jsonplaceholder.typicode.com/todoss/');
-request.send();
+console.log(3)
+console.log(4)
+
