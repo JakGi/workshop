@@ -1,43 +1,44 @@
+// exlicity types
+let character: string;
+let age: number;
+let isLoggedIn: boolean;
+// age = 'ss'
+age = 30;
+// isLoggedIn = 25;
+isLoggedIn = true;
+
+
 // arrays
+let ninjas:string[] = [];
+// ninjas = [10, 23]
+ninjas = ['joshi', 'mario'];
+ninjas.push('shaun'); 
 
-let names = ['luigi', 'mario', 'joshi'];
+// union types
+let mixed: (string|number|boolean)[] = [];
+mixed.push('hello');
+mixed.push(23);
+mixed.push(true)
+console.log(mixed)
+let uid: string|number;
+uid = 12;
+uid = 'Kuba';
+// uid = true
 
-// names ='hello'
+// objects
+let ninjaOne: object;
+ninjaOne = {name: 'Kuba', age:30}
+// ninjaOne = 'heelo'
+ninjaOne = []
 
-names.push('toad');
-// names.push(3);
-// names[0] = 3;
+let ninjaTwo: {
+    name: string,
+    age: number,
+    betlColor: string
+}
 
-let numbers = [10, 20, 30 ,50];
-
-numbers.push(25);
-// numbers.push('shaoun')
-
-let mixed = ['ken', 4, 'chilun', 6, 4];
-
-mixed.push('ryu');
-mixed.push(5);
-mixed[0] = 3;
-
-
-// objects 
-
-let ninja = {
-    name: 'Mario',
-    belt: 'Black',
-    age: 30
-};
-
-ninja.age = 50;
-ninja.name = 'Ryu';
-// ninja.age = '30'
-// ninja.skils = ['fighting', 'skiing'];
-
-ninja = {
-    name: 'kuba',
-    belt: 'orange',
+ninjaTwo = {
+    name: 'mario',
     age: 30,
-    // skills: [
-    //     'ninja'
-    // ]
+    betlColor: 'Black'
 }
