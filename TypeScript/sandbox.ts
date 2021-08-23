@@ -1,18 +1,43 @@
-let character = 'mario';
-let age = 30;
-let isBlackBelt = false;
+// arrays
 
-// character = 20;
-character = 'luigi';
+let names = ['luigi', 'mario', 'joshi'];
 
-// age = 'yoshi';
-age = 40;
+// names ='hello'
 
-// isBlackBelt = 'yes';
-isBlackBelt = true;
+names.push('toad');
+// names.push(3);
+// names[0] = 3;
 
-const circ = (diamater: number) => {
-    return diamater * Math.PI
+let numbers = [10, 20, 30 ,50];
+
+numbers.push(25);
+// numbers.push('shaoun')
+
+let mixed = ['ken', 4, 'chilun', 6, 4];
+
+mixed.push('ryu');
+mixed.push(5);
+mixed[0] = 3;
+
+
+// objects 
+
+let ninja = {
+    name: 'Mario',
+    belt: 'Black',
+    age: 30
+};
+
+ninja.age = 50;
+ninja.name = 'Ryu';
+// ninja.age = '30'
+// ninja.skils = ['fighting', 'skiing'];
+
+ninja = {
+    name: 'kuba',
+    belt: 'orange',
+    age: 30,
+    // skills: [
+    //     'ninja'
+    // ]
 }
-
-console.log(circ(7.5));
