@@ -1,44 +1,29 @@
-// exlicity types
-let character: string;
-let age: number;
-let isLoggedIn: boolean;
-// age = 'ss'
-age = 30;
-// isLoggedIn = 25;
-isLoggedIn = true;
+let age: any;
 
+age = 23;
 
-// arrays
-let ninjas:string[] = [];
-// ninjas = [10, 23]
-ninjas = ['joshi', 'mario'];
-ninjas.push('shaun'); 
+age = true;
+console.log(age);
+age = "Hi";
+console.log(age);
+age = { name: "Luigi" };
+console.log(age);
 
-// union types
-let mixed: (string|number|boolean)[] = [];
-mixed.push('hello');
-mixed.push(23);
-mixed.push(true)
-console.log(mixed)
-let uid: string|number;
-uid = 12;
-uid = 'Kuba';
-// uid = true
+let mixed: any[] = [];
 
-// objects
-let ninjaOne: object;
-ninjaOne = {name: 'Kuba', age:30}
-// ninjaOne = 'heelo'
-ninjaOne = []
+mixed.push(5);
+mixed.push("mario");
+mixed.push(true);
 
-let ninjaTwo: {
-    name: string,
-    age: number,
-    betlColor: string
-}
+console.log(mixed);
 
-ninjaTwo = {
-    name: 'mario',
-    age: 30,
-    betlColor: 'Black'
-}
+let ninja: {
+  name: any;
+  age: any;
+};
+
+ninja = { name: "mario", age: 23 };
+console.log(ninja);
+
+ninja = { name: "luigi", age: "23" };
+console.log(ninja);

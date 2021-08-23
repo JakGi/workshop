@@ -1,34 +1,18 @@
-// exlicity types
-var character;
 var age;
-var isLoggedIn;
-// age = 'ss'
-age = 30;
-// isLoggedIn = 25;
-isLoggedIn = true;
-// arrays
-var ninjas = [];
-// ninjas = [10, 23]
-ninjas = ['joshi', 'mario'];
-ninjas.push('shaun');
-// union types
+age = 23;
+age = true;
+console.log(age);
+age = "Hi";
+console.log(age);
+age = { name: "Luigi" };
+console.log(age);
 var mixed = [];
-mixed.push('hello');
-mixed.push(23);
+mixed.push(5);
+mixed.push("mario");
 mixed.push(true);
 console.log(mixed);
-var uid;
-uid = 12;
-uid = 'Kuba';
-// uid = true
-// objects
-var ninjaOne;
-ninjaOne = { name: 'Kuba', age: 30 };
-// ninjaOne = 'heelo'
-ninjaOne = [];
-var ninjaTwo;
-ninjaTwo = {
-    name: 'mario',
-    age: 30,
-    betlColor: 'Black'
-};
+var ninja;
+ninja = { name: "mario", age: 23 };
+console.log(ninja);
+ninja = { name: "luigi", age: "23" };
+console.log(ninja);
