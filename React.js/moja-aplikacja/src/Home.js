@@ -8,13 +8,15 @@ const Home = () => {
     { title: "Tibs", body: "new text....", author: "mario", id: 3 },
   ]);
 
+  const handdleDelete = (id) => {
+    const newBlogs = blogs.filter(blog => blog.id !== id);
+    setBlogs(newBlogs);
+  }
+
   return (
     <div className="home">
-      <BlogList blogs={blogs} title="All Blogs !" />
-      <BlogList
-        blogs={blogs.filter((blog) => blog.author === "mario")}
-        title="Mario Blogs"
-      />
+      <BlogList blogs={blogs} title="All Blogs !" handdleDelete={handdleDelete}/>
+      
     </div>
   );
 };
