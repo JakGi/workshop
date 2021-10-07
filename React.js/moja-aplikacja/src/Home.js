@@ -3,6 +3,9 @@ import BlogList from "./BlogList";
 
 const Home = () => {
   const [blogs, setBlogs] = useState(null);
+  const [isLoading , setIsLoading] = useState(true)
+
+  // npx json-server --watch data/db.json --port 8000
 
   useEffect(() => {
     fetch("http://localhost:8000/blogs")
@@ -11,11 +14,13 @@ const Home = () => {
       })
       .then((data) => {
         setBlogs(data);
+        setIsLoading(false)
       });
   }, []);
 
   return (
     <div className="home">
+      {isLoading && <div>Loading...</div>}
       {blogs && <BlogList blogs={blogs} title="All Blogs !" />}
     </div>
   );
