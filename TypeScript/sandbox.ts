@@ -15,7 +15,6 @@ mixed.push(5);
 mixed.push("mario");
 mixed.push(true);
 
-console.log(mixed);
 
 let ninja: {
   name: any;

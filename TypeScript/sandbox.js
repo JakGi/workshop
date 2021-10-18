@@ -10,7 +10,6 @@ var mixed = [];
 mixed.push(5);
 mixed.push("mario");
 mixed.push(true);
-console.log(mixed);
 var ninja;
 ninja = { name: "mario", age: 23 };
 console.log(ninja);

@@ -4,6 +4,8 @@ const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+// halo
+// kuba??
 
   useEffect(() => {
     const abortCont = new AbortController();
